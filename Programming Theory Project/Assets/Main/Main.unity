@@ -1139,6 +1139,3 @@ MonoBehaviour:
   animalTypes:
   - {fileID: 103890, guid: 2b6e184cdeba888429a079d519a7c8d5, type: 3}
   - {fileID: 151702, guid: 68a45bf17ac566545b70a13c90a7ee65, type: 3}
-  animalX: 1.5
-  animalY: 0
-  animalZ: 3

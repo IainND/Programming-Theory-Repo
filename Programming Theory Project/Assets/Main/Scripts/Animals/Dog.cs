@@ -10,9 +10,5 @@ public class Dog : Animal
         
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
 }

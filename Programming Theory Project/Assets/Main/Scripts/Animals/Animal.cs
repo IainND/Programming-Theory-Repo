@@ -4,15 +4,22 @@ using UnityEngine;
 
 public class Animal : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    float turnSpeed;
+
+    void Awake()
     {
-        
+        turnSpeed = ObjectMaker.oMInstance.RandomFloat(69);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Update()
     {
-        
+        transform.Rotate(0, turnSpeed * Time.deltaTime, 0);
+        StartCoroutine(DestroyMe());
+    }
+
+    IEnumerator DestroyMe()
+    {
+        yield return new WaitForSeconds(5);
+        Destroy(gameObject);
     }
 }
