@@ -1136,7 +1136,9 @@ MonoBehaviour:
   shapeTypes:
   - {fileID: 510754409819066578, guid: 1373530223b085e49b27972043d91146, type: 3}
   - {fileID: 421877254993956853, guid: e820ff1a03caaec4f822e3c70a3e9c6d, type: 3}
-  animalTypes: []
+  animalTypes:
+  - {fileID: 103890, guid: 2b6e184cdeba888429a079d519a7c8d5, type: 3}
+  - {fileID: 151702, guid: 68a45bf17ac566545b70a13c90a7ee65, type: 3}
   animalX: 1.5
   animalY: 0
   animalZ: 3

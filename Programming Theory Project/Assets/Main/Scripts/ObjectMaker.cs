@@ -12,9 +12,9 @@ public class ObjectMaker : MonoBehaviour
     private float shapeZ = 3f;
 
     public GameObject[] animalTypes;
-    public float animalX = 1.5f;
-    public float animalY = 0f;
-    public float animalZ = 3f;
+    private float animalX = -1.5f;
+    private float animalY = -1.5f;
+    private float animalZ = 5f;
 
     private void Awake()
     {
@@ -35,8 +35,7 @@ public class ObjectMaker : MonoBehaviour
         }
         else if (request == "Animal")
         {
-            Vector3 animalStartPos = new Vector3(animalX, animalY, animalZ);
-            MakeAnimal(animalStartPos);
+            MakeAnimal();
         }
         else { Debug.Log("Invalid MakeSomething request"); }
     }
@@ -46,15 +45,13 @@ public class ObjectMaker : MonoBehaviour
         int shapeIndex = Random.Range(0, shapeTypes.Length);
         Vector3 shapeStartPos = new Vector3(shapeX, shapeY, shapeZ);
         GameObject newShape = (GameObject)Instantiate(shapeTypes[shapeIndex], shapeStartPos, shapeTypes[shapeIndex].transform.rotation);
-        
-
     }
 
-    void MakeAnimal(Vector3 animalLocation)
+    void MakeAnimal()
     {
-        //Work out MakeShape first, then copy.
-        int animalToMake = Random.Range(animalTypes.GetLowerBound(0), animalTypes.Length);
-
+        int animalIndex = Random.Range(0, animalTypes.Length);
+        Vector3 animalStartPos = new Vector3(animalX, animalY, animalZ);
+        GameObject newAnimal = (GameObject)Instantiate(animalTypes[animalIndex], animalStartPos, animalTypes[animalIndex].transform.rotation);
     }
 
     Vector3 RandomVector(int xLimit, int yLimit, int zLimit)
