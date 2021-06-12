@@ -11,7 +11,6 @@ public class Sphere : Shape
         zValue = ObjectMaker.oMInstance.RandomFloat(1);
     }
 
-    // Update is called once per frame
     protected override void movePattern(float xMoveShape, float yMoveShape, float zMoveShape)
     {
         transform.Translate(xMoveShape * Time.deltaTime, yMoveShape * Time.deltaTime, zMoveShape * Time.deltaTime);

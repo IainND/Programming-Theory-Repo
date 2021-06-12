@@ -14,6 +14,5 @@ public class Cube : Shape
     protected override void movePattern(float xMove, float yMove, float zMove)
     {
         transform.Rotate(xMove * Time.deltaTime, yMove * Time.deltaTime, zMove * Time.deltaTime);
-        
     }
 }

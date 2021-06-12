@@ -10,6 +10,10 @@ public abstract class Shape : MonoBehaviour
     public float yValue;
     public float zValue;
 
+    public AudioSource shapeAudio;
+    public AudioClip spawnSound;
+
+
     public void Update()
     {
         movePattern(xValue, yValue, zValue);
